@@ -1,0 +1,149 @@
+Features: For each feature you implement, move to the Implemented section and
+explain who did it (utorid) and how you did it. You can consider these as 
+almost user stories, if you just add a bit to them. Add more features/user stories at the bottom.
+Move them up when completed.
+
+------------------------------------------------------------------------------------
+Implemented: 
+------------------------------------------------------------------------------------
+0) Login
+   Done by: arnold
+   Explanation: created schema, including appuser table, populated with 
+   default user. Also created handler for login state as well as login page.
+
+------------------------------------------------------------------------------------
+Unimplemented:
+------------------------------------------------------------------------------------
+01) User never votes twice on the same pair
+    Done by: leejos14
+    Explanation: It's a loop that keeps on getting random pairs from the restaurant table
+    and only returns if it finds an entry that does not exist in the voters table
+
+02) Page token: Reload button does not cause incorrect vote, that is reload presents
+   expired message and new page presented
+    Done by: No one
+    Explanation: 
+
+03) Page token: Back button not allowed, that is old submission prevented
+    Done by: leejos14 
+    Explanation: header function in php, only exclusion is login and register page
+
+04) Excellent use of MVC
+    Done by: leejos14
+    Explanation: Models are in charge of sql queries, controller creates most of the logic
+    involving scraping info from web pages and acitons, views are full of php pages
+
+05) Insecure direct object references prevented, don't need object id's on the page
+    Done by: leejos14
+    Explanation: Using php echo, more of it is obfuscated
+
+06) Good schema
+    Done by: leejos14, alihamz2
+    Explanation: table for user data, table for restaurant data, table for user votes,
+    and table for admin keys
+
+07) Summary screen presents list of restaurants and their current ranking
+    Done by: leejos14
+    Explanation: If you mean the results page, then yest
+
+08) Summary screen presents some notion of velocity for each restaurant, for example
+   velocity over the past few ratings, velocity over the past few minutes.
+   Users see which restaurants are moving in the ratings fastest.
+    Done by: No one 
+    Explanation: 
+
+09) Summary screen automatically updates every once in a while.
+    Done by: leejos14 
+    Explanation: Refreshes every 10 seconds
+
+10) Good implementation of navigation in the controller.
+    Done by: leejos14
+    Explanation: Highlighted text to make sure you know where you are
+
+11) User profile has lots of interesting inputs
+    Done by: leejos14
+    Explanation: Welcomes user on login, has email, first name, last name, account type, admin
+    escalation, voter deescelation, admin keys for voters to escelate to admins, admins can 
+    add restaurants too.
+
+12) Invalid form submission triggers page reload with form still filled in
+    as well as good error messages.
+    Done by: leejos14
+    Explanation: Error messages are relatively decent
+
+13) All user inputs whitelisted on the backend, whether checked on the front
+    or not.
+    Done by: leejos14
+    Explanation: Prepared statements
+
+14) Good use of HTML5 form fields for form validation.
+    Done by: leejos14
+    Explanation: emails must be emails, passwords fields are hidden
+
+15) User profile can be visited for the first time (on registration),
+    on error, and on update in which case it is pre-loaded with
+    appropriate fields.
+    Done by: leejos14
+    Explanation: User profile has editing user ability
+
+16) Good use of sql
+    Done by: leejos14
+    Explanation: Judge for yourself
+
+17) Wins vs losses vs ties on results page
+    Done by: leejos14
+    Explanation: Wins and losses but no ties
+
+18) Navigation highlights which page they are on
+    Done by: leejos14
+    Explanation: Its red :D
+
+19) Require user to answer 10 (for example) before they can see results
+    Done by: leejos14
+    Explanation: Element only shows after 10 votes
+
+20) Add in option for tie or ‘I don’t know’ instead of just one wins etc.
+    Done by: leejos14
+    Explanation: Added an I don't care option
+
+21) Smarter choice of pairs, so for example, restaurants compete with ‘closely rated’ other restaurants. (Is this better?)
+    Done by: leejos14
+    Explanation: It's a mixed bag, variety is the spice of life
+
+22) Good use of session
+    Done by: leejos14 
+    Explanation: Much use of session variables
+
+23) Good use of transactions as appropriate. Note: You can put a begin/commit block in a try/catch to simplify transaction exception handling. 
+    Done by: No one
+    Explanation: 
+
+Add more user stories below... move them up when done
+
+25) Description: Users can login as admins
+    Done by: leejos14
+    Explanation: Users can login as an admin either by registering or editing their profile
+
+26) Description: Admins can create admin keys
+    Done by: leejos14
+    Explanation: Admins can make admin keys to create more admins
+
+27) Description: Password data security
+    Done by: leejos14
+    Explanation: Sensitive data like passwords and admin keys are hashed and then saved in the database
+
+28) Description: History Page
+    Done by: leejos14
+    Explanation: 4 page of history that stores an archive of all the votes that the user casts
+
+29) Description: Models store database stuff
+    Done by: leejos14
+    Explanation: no database queries or etc are found outside of models
+
+30) Description: Account Termination
+    Done by: leejos14
+    Explanation: Users can delete their accounts and admin keys tied to that account will be wiped off the database
+
+31) Description: ELO System
+    Done by: leejos14
+    Explanation: Restaurants are ranked by elo

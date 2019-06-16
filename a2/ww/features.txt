@@ -1,0 +1,14 @@
+Extras:
+    User:
+  User can update a field of info like username, password, email, firstname, lastname, and user type
+	Admin system like piazza where users can become admins with the use of adminkeys
+	Admins can delete users and admins, create new admin escalation keys, view all user info,
+		and delete users
+	Registration and update field validate their inputs and only whitelist specific inputs
+	Users can upgrade to an admin account even after registration
+  Logout erases all local info
+
+    Game:
+	Grazing enemies is +20 pts
+	Killing enemies is +500 pts
+  User scores will be updated everytime a game end (ie high score will be updated when a new highscore is presented, game wins will be incremented, and etc.)
